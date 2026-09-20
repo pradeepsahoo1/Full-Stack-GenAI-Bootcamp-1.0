@@ -38,7 +38,7 @@ pinecone
 langchain_pinecone
 langchain_qdrant
 langgraph-checkpoint-postgres 
-"psycopg[binary,pool]"
+psycopg[binary,pool]
 pydantic
 langgraph-checkpoint-sqlite
 streamlit
