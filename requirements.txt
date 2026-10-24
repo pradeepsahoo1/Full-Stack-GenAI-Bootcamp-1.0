@@ -43,10 +43,12 @@ langgraph-checkpoint-sqlite
 streamlit
 #deepagent
 python-dotenv
+deepagent
 mcp[cli]>=2.0
 langchain[mcp]>=1.4.0
 httpx2
+httpx
 uvicorn
-
-
+a2a-sdk[http-server]>=1.0
+starlette
 
