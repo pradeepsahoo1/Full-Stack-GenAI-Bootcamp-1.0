@@ -38,12 +38,11 @@ pinecone
 langchain_pinecone
 langchain_qdrant
 langgraph-checkpoint-postgres 
-"psycopg[binary,pool]"
 pydantic
 langgraph-checkpoint-sqlite
 streamlit
+#deepagent
 python-dotenv
-deepagent
 mcp[cli]>=2.0
 langchain[mcp]>=1.4.0
 httpx2
