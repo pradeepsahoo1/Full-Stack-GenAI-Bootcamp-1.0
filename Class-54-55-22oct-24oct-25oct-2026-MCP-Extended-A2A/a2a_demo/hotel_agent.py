@@ -11,11 +11,7 @@ from starlette.applications import Starlette
 
 
 class HotelAgentExecutor(AgentExecutor):
-    async def execute(
-        self,
-        context: RequestContext,
-        event_queue: EventQueue,
-    ) -> None:
+    async def execute(self,context: RequestContext, event_queue: EventQueue,) -> None:
         query = get_message_text(context.message) if context.message else ""
 
         result = (
@@ -37,7 +33,7 @@ class HotelAgentExecutor(AgentExecutor):
     ) -> None:
         raise NotImplementedError("Cancellation is not supported.")
 
-
+# Agent Skill — What the Flight Agent can do
 skill = AgentSkill(
     id="find_hotels",
     name="Find Hotels",
@@ -48,6 +44,7 @@ skill = AgentSkill(
     examples=["Find a 4-star hotel in Dubai"],
 )
 
+# Agent Card — Information about the Flight Agent
 agent_card = AgentCard(
     name="Hotel Agent",
     description="Specialized agent for finding hotels.",

@@ -9,13 +9,8 @@ from a2a.server.tasks import InMemoryTaskStore
 from a2a.types import AgentCapabilities, AgentCard, AgentInterface, AgentSkill
 from starlette.applications import Starlette
 
-
 class FlightAgentExecutor(AgentExecutor):
-    async def execute(
-        self,
-        context: RequestContext,
-        event_queue: EventQueue,
-    ) -> None:
+    async def execute(self,context: RequestContext,event_queue: EventQueue,) -> None:
         query = get_message_text(context.message) if context.message else ""
 
         result = (
@@ -30,11 +25,7 @@ class FlightAgentExecutor(AgentExecutor):
             new_text_message(result)
         )
 
-    async def cancel(
-        self,
-        context: RequestContext,
-        event_queue: EventQueue,
-    ) -> None:
+    async def cancel(self,context: RequestContext,event_queue: EventQueue,) -> None:
         raise NotImplementedError("Cancellation is not supported.")
 
 
