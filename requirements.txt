@@ -51,4 +51,5 @@ httpx
 uvicorn
 a2a-sdk[http-server]>=1.0
 starlette
+guardrails-ai==0.11.0
 
